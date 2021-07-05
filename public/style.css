@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    padding-bottom: 3rem;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: space-between;
+    border-bottom: 2px black solid;
+}
+
+nav > .logo {
+    display: block;
+    height: 50px;
+}
+
+#leave {
+    position: absolute;
+    right: 1rem;
+    color: white;
+    background-color: red;
+    padding: 0.3rem 1.3rem;
+    font-size: 1rem;
+    border: 2px solid black;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    outline: none;
+}
+
+#leave:hover {
+    background-color: #d00202;
+}
+
+#leave:disabled {
+    background-color: #bd9a9a;
+    cursor: not-allowed;
+}
+
+.user {
+    text-align: center;
+    padding: 6px;
+    border-bottom: 2px solid black;
+    font-weight: bold;
+}
+
+.container {
+    overflow-y: auto;
+    margin-block: 10px;
+}
+
+.msg {
+    color: white;
+    background-color: rgb(17, 3, 212);
+    width: auto;
+    max-width: 60%;
+    padding: 10px;
+    margin: 6px 12px;
+    border: 2px solid black;
+    border-radius: 10px;
+    overflow-wrap: break-word;
+}
+
+.msgJoined {
+    color: black;
+    background-color: #b0b0b0;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.msgLeft {
+    color: white;
+    background-color: red;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.left {
+    float: left;
+    clear: both;
+}
+
+.right {
+    float: right;
+    clear: both;
+    background-color: green;
+}
+
+.center {
+    text-align: center;
+    margin: 10px 30%;
+    clear: both;
+}
+
+#form {
+    background: rgba(0, 0, 0, 0.15);
+    padding: 0.25rem;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    height: 3rem;
+    box-sizing: border-box;
+}
+
+#input {
+    border: none;
+    padding: 0 1rem;
+    flex-grow: 1;
+    border-radius: 2rem;
+    margin: 0.25rem;
+}
+
+#input:focus {
+    outline: none;
+}
+
+#input:disabled {
+    border: 1px solid #999999;
+    background-color: #a5a5a5;
+    color: #ffffff;
+    cursor: not-allowed;
+}
+
+#form > button {
+    background: #333;
+    border: none;
+    padding: 0 1rem;
+    margin: 0.25rem;
+    border-radius: 3px;
+    outline: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+#form > button:hover {
+    background: rgb(36, 35, 35);
+}
+
+#form > button:disabled {
+    border: 1px solid #999999;
+    background-color: #a5a5a5;
+    color: #ffffff;
+    cursor: not-allowed;
+}
+
+#messages {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#messages > li {
+    padding: 0.5rem 1rem;
+}
+
+#messages > li:nth-child(odd) {
+    background: #efefef;
+}
+
+@media (max-width: 550px) {
+    nav {
+        display: flex;
+        flex-direction: column;
+        /* justify-content: center; */
+        /* align-items: center;
+        align-content: space-between;
+        border-bottom: 2px black solid; */
+    }
+
+    #leave {
+        position: unset;
+        margin-block: 10px;
+    }
+
+    .center {
+        margin: 10px 10%;
+    }
+}
